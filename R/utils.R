@@ -97,3 +97,14 @@ y_i_fun <- function(y, n_i) {
 #   return(datac)
 # }
 
+#' @keywords internal
+lambda_trans = function(LambdaS, LambdaSt, len, ind, j) {
+  LambdaS@x <- LambdaSt@x <- len
+  LambdaS@x[which(ind == j)] <- LambdaSt@x[which(ind == j)] <- 1
+  diagonal <- Matrix::diag(LambdaS)
+  diag(LambdaS) <- diag(LambdaSt) <- 0
+  Dj <- LambdaS + LambdaSt
+  diag(Dj) <- diagonal
+  # Dj <- as.matrix(Dj)
+  return(Dj)
+}

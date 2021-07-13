@@ -316,8 +316,8 @@ bayesboost <- function(y, x, mstop, id, id_constant_vars = NULL,
     mse[s] <- mean((y - y_hat[, s])^2)
 
     # cAIC
-    caic <- cAIC(y, y_hat[, s], X[, which(beta != 0)], sigma2_mode[s], G, Z, q, m)
-    # caic <- cAICeigen(y, y_hat[, s], X[, which(beta != 0)], sigma2_mode[s], as.matrix(G), as.matrix(Z), q, m)
+    # caic <- cAIC(y, y_hat[, s], X[, which(beta != 0)], sigma2_mode[s], G, Z, q, m)
+    caic <- cAICeigen(y, y_hat[, s], X[, which(beta != 0)], sigma2_mode[s], as.matrix(G), as.matrix(Z), q, m)
     cAIC[s] <- caic$cAIC
     bc[s] <- caic$bc
     cll[s] <- caic$cll
@@ -398,3 +398,5 @@ estimate_mode <- function(x) {
   d <- density(x, from = min(x), to = max(x))
   d$x[which.max(d$y)]
 }
+
+
