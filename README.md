@@ -1,0 +1,3 @@
+# BayesBoost
+
+Bayesian Boosting
