@@ -1,11 +1,13 @@
 Package: BayesBoost
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Bayesian Boosting for Linear Mixed Models
 Version: 0.1.0
 Author: Boyao Zhang
 Maintainer: Boyao Zhang <boyao.zhang@fau.de>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Perform Bayesian Boosting estimation for linear mixed models (LMM)
+    This is a combination of Bayesian inference and boosting technqiue, 
+    which benefits from the selection feature of model-based boosting and 
+    uncertainty estimation of Bayesian inference.
 License: GPL-3
 Depends: 
     R (>= 3.6),

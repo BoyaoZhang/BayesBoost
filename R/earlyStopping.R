@@ -1,5 +1,7 @@
-#' @title Early stopping
-#' @param cAIC cAIC
+#' @title cAIC-based stopping criteria
+#' @description Determine the stopping iteration of cAICs based on the existence of
+#'   lower values in the following "patience" iterations.
+#' @param cAIC a serices of cAICs.
 #' @param pat patient paramter, default is 3.
 #' @param min_iters the least number of boosting iterations the algorithm should perform,
 #'     default is 20. The actual minimum is combined with pat parameter, i.e., "min_iters + pat".

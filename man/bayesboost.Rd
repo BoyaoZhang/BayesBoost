@@ -2,7 +2,7 @@
 % Please edit documentation in R/bayesboost.R
 \name{bayesboost}
 \alias{bayesboost}
-\title{BayesBoost algoritm for linear mixed model}
+\title{BayesBoost algorithm for linear mixed model}
 \usage{
 bayesboost(
   y,
@@ -54,5 +54,9 @@ if max_num_ranef = 0, then execute random intercept model.}
 \item{seed}{random.seed for reproduction.}
 }
 \description{
-BayesBoost algoritm for linear mixed model
+It is used to perform Bayesian boosting estimation for linear mixed models.
+  Stopping iteration is determined according to the cAIC-based stopping criteria with the
+  help of Hampel-filter. It provides flexible random effects structures, including the
+  totally automatic selection of random effects, automatic selection from a potential
+  random effects set and specific random effect structure.
 }

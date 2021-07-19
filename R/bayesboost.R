@@ -1,4 +1,9 @@
-#' @title BayesBoost algoritm for linear mixed model
+#' @title BayesBoost algorithm for linear mixed model
+#' @description It is used to perform Bayesian boosting estimation for linear mixed models.
+#'   Stopping iteration is determined according to the cAIC-based stopping criteria with the
+#'   help of Hampel-filter. It provides flexible random effects structures, including the
+#'   totally automatic selection of random effects, automatic selection from a potential
+#'   random effects set and specific random effect structure.
 #' @param y response variable
 #' @param x explanatory variables, it contains all variables (including cluster-constant ones).
 #' @param mstop maximal stopping iteration.
